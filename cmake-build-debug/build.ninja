@@ -72,11 +72,17 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_Algorithm_2_Homework_1: phony || CMakeFiles/Algorithm_2_Homework_1.dir
 
-build CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o: CXX_COMPILER__Algorithm_2_Homework_1_Debug /Users/emrekomsal/CLionProjects/Algorithm-2-Homework-1/Algorithm$ 2$ Homework$ 1/main.cpp || cmake_object_order_depends_target_Algorithm_2_Homework_1
-  DEP_FILE = CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o.d
-  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++14
+build CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm2Homework1/main.cpp.o: CXX_COMPILER__Algorithm_2_Homework_1_Debug /Users/emrekomsal/CLionProjects/Algorithm-2-Homework-1/Algorithm2Homework1/main.cpp || cmake_object_order_depends_target_Algorithm_2_Homework_1
+  DEP_FILE = CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm2Homework1/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++11
   OBJECT_DIR = CMakeFiles/Algorithm_2_Homework_1.dir
-  OBJECT_FILE_DIR = CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1
+  OBJECT_FILE_DIR = CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm2Homework1
+
+build CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm2Homework1/Player.cpp.o: CXX_COMPILER__Algorithm_2_Homework_1_Debug /Users/emrekomsal/CLionProjects/Algorithm-2-Homework-1/Algorithm2Homework1/Player.cpp || cmake_object_order_depends_target_Algorithm_2_Homework_1
+  DEP_FILE = CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm2Homework1/Player.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -std=gnu++11
+  OBJECT_DIR = CMakeFiles/Algorithm_2_Homework_1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm2Homework1
 
 
 # =============================================================================
@@ -86,7 +92,7 @@ build CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o: C
 #############################################
 # Link the executable Algorithm_2_Homework_1
 
-build Algorithm_2_Homework_1: CXX_EXECUTABLE_LINKER__Algorithm_2_Homework_1_Debug CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o
+build Algorithm_2_Homework_1: CXX_EXECUTABLE_LINKER__Algorithm_2_Homework_1_Debug CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm2Homework1/main.cpp.o CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm2Homework1/Player.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk
   OBJECT_DIR = CMakeFiles/Algorithm_2_Homework_1.dir
   POST_BUILD = :

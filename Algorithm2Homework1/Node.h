@@ -11,6 +11,11 @@ public:
     int pos_x;//x position of node
     int pos_y;//y position of node
 
+    Node* up = nullptr;
+    Node* left = nullptr;
+    Node* down = nullptr;
+    Node* right = nullptr;
+
     bool isOccupied = false;//is battleship on it
     bool isHit = false;
 

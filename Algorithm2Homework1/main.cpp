@@ -8,12 +8,13 @@
 
 #include "Node.h"
 #include "Board.h"
+#include "Player.h"
 
 
 using namespace std;
 
 int main()
 {
-    Board board(5);
+    Board board(3);
     board.printNodes();
 }
