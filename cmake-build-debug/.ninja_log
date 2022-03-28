@@ -1,7 +1,15 @@
 # ninja log v5
-0	226	1648392377152554558	CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o	f083f384273814f6
-227	255	1648392377182395739	Algorithm_2_Homework_1	1ec0d7c54b732b16
-1	416	1648452144450158516	CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o	f083f384273814f6
-416	459	1648452144494791063	Algorithm_2_Homework_1	1ec0d7c54b732b16
-1	401	1648455059315644910	CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o	f083f384273814f6
-401	441	1648455059357609819	Algorithm_2_Homework_1	1ec0d7c54b732b16
+423	463	1648479501479117851	Algorithm_2_Homework_1	1ec0d7c54b732b16
+1	437	1648482447003567921	CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o	f083f384273814f6
+0	46	1648482472590644437	build.ninja	931c27b9d77f7cb8
+2	43	1648482472640102789	Algorithm_2_Homework_1	1ec0d7c54b732b16
+1	419	1648483485848566125	CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o	f083f384273814f6
+419	460	1648483485891385516	Algorithm_2_Homework_1	1ec0d7c54b732b16
+1	385	1648483538623188992	CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o	f083f384273814f6
+385	422	1648483538662061600	Algorithm_2_Homework_1	1ec0d7c54b732b16
+1	438	1648484146568361531	CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o	f083f384273814f6
+438	483	1648484146615353528	Algorithm_2_Homework_1	1ec0d7c54b732b16
+1	267	1648484200396732880	CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o	f083f384273814f6
+267	299	1648484200431436047	Algorithm_2_Homework_1	1ec0d7c54b732b16
+1	263	1648484222379198409	CMakeFiles/Algorithm_2_Homework_1.dir/Algorithm_2_Homework_1/main.cpp.o	f083f384273814f6
+263	293	1648484222410202491	Algorithm_2_Homework_1	1ec0d7c54b732b16
