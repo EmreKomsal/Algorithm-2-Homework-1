@@ -15,6 +15,5 @@ using namespace std;
 
 int main()
 {
-    Board board(3);
-    board.printNodes();
+    Player player1(5, "Player1", 2, 3, 3);
 }
