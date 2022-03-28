@@ -5,7 +5,6 @@
 #ifndef NODE_H
 #define NODE_H
 
-#include "Ship.h"
 
 class Node{
 public:
@@ -13,7 +12,6 @@ public:
     int pos_y;//y position of node
 
     bool isOccupied = false;//is battleship on it
-    Ship* occupyingShip;
     bool isHit = false;
 
     Node(int x, int y){
@@ -22,9 +20,6 @@ public:
     }
 
     void GetHit(){
-        if (isOccupied){
-            occupyingShip->GetHit(pos_x, pos_y);
-        }
     }
 };
 

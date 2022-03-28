@@ -6,17 +6,17 @@
 #define BOARD_H
 
 #include <vector>
-
 #include "Node.h"
-#include "Ship.h"
-
 
 using namespace std;
 
+
 class Board {
 public:
+
     int size;
-    vector<Node*> pieces;
+    vector<Node> pieces;
+
     Board(int boardSize){
         size = boardSize;
         CreateNodes();
