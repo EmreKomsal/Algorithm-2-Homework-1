@@ -8,8 +8,7 @@ Player::Player(int player_board_size, string player_name, int player_ship_amount
     name = player_name;
     ship_amount = player_ship_amount;
     player_board = new Board(player_board_size);
-    start_x = pos_x;
-    start_y = pos_y;
+    start_node = player_board->FindNode(pos_x, pos_y);
     for (int i = 0; i < ship_amount; ++i) {
         int x,y,x1,y1;
         cout << "Give Loc \n";

@@ -14,8 +14,7 @@ public:
     Board* player_board;
     int ship_amount = 0;
     int total_size = 0;
-    int start_x{};
-    int start_y{};
+    Node* start_node = nullptr;
 
     Player(int player_board_size, string player_name, int player_ship_amount, int pos_x, int pos_y);
 
