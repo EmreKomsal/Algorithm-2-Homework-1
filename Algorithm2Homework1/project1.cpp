@@ -48,6 +48,7 @@ int main(int argc, char** argv)
 }
 
 void StatisticWriter(Player* player1, Player* player2, string winner, float running_time){
+    cout << "\n";
     cout << "The algoritm: " << player1->name << ": " << player1->search_method << ", " << player2->name << ": " << player2->search_method << "\n";
     cout << "The number of visited nodes:" << player1->name << ": " << player1->visitedNodes.size() << ", " << player2->name << ": " << player2->visitedNodes.size() << "\n";
     cout << "The number of nodes kept in the memory:" << player1->name << ": "
