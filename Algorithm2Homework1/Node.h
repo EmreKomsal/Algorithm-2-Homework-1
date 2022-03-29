@@ -18,6 +18,7 @@ public:
 
     bool isOccupied = false;//is battleship on it
     bool isHit = false;
+    bool isVisited = false;
 
     Node(int x, int y){
         pos_x = x;

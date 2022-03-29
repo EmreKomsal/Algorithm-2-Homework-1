@@ -5,7 +5,7 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <vector>
+
 #include "Node.h"
 
 using namespace std;
@@ -57,7 +57,7 @@ public:
                 total_node++;
             }
         }
-        cout << "Board Created \n";
+        //cout << "\n Board Created \n";
     }
 
     void DeployPlayerShips(int start_x, int start_y, int end_x, int end_y){
@@ -85,7 +85,16 @@ public:
         return traverse;
     }
 
-
+    bool HitOrMiss(Node* attacked_node){
+        Node* targetNode = attacked_node;
+        targetNode->isVisited = true;
+        if (targetNode->isOccupied && !targetNode->isHit){
+            targetNode->isHit = true;
+            return true;
+        } else{
+            return false;
+        }
+    }
 
     //DEBUG FUNC
     void printNodes(){
@@ -106,6 +115,30 @@ public:
                     } else {
                         cout << " O";
                     }
+                } else {
+                    cout << " .";
+                }
+                traverse_h = traverse_h->right;
+            }
+            traverse_v = traverse_v->down;
+            traverse_h = traverse_v;
+        }
+    }
+
+    void printVisitedNodes(){
+        if(!head_node){
+            cout << "Board is Empty";
+            return;
+        }
+        Node* traverse_v = head_node;
+        Node* traverse_h = head_node;
+        for (int i = 0; i < size; i++) {
+            cout << "\n";
+            for(int j = 0; j < size; j++){
+                cout << "\t";
+                cout << traverse_h->pos_x << ", "<<traverse_h->pos_y;
+                if (traverse_h->isVisited){
+                    cout << " X";
                 } else {
                     cout << " .";
                 }

@@ -6,6 +6,9 @@
 #define PLAYER_H
 
 #include <iostream>
+#include <fstream>
+#include <queue>
+#include <vector>
 #include "Board.h"
 
 class Player {
@@ -14,12 +17,20 @@ public:
     Board* player_board;
     int ship_amount = 0;
     int total_size = 0;
-    Node* start_node = nullptr;
+    int start_x, start_y;
+    string search_method;
 
-    Player(int player_board_size, string player_name, int player_ship_amount, int pos_x, int pos_y);
+    Player* rival_player = nullptr;
+    queue<Node*> attack_qeue;
+    vector<Node*> visitedNodes;
+
+
+    Player(string filename, string player_name);
 
     void DeployShips(int start_x, int start_y, int end_x, int end_y);
+
+    void FindTargetQue();
+
+    void AttackToRival();
 };
-
-
 #endif //PLAYER_H
