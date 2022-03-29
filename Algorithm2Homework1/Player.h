@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <fstream>
-#include <queue>
+#include <deque>
 #include <vector>
 #include "Board.h"
 
@@ -21,7 +21,7 @@ public:
     string search_method;
 
     Player* rival_player = nullptr;
-    queue<Node*> attack_qeue;
+    deque<Node*> attack_qeue;
     vector<Node*> visitedNodes;
 
 

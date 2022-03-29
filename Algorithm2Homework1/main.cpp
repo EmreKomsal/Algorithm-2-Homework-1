@@ -13,8 +13,8 @@ using namespace std;
 
 int main()
 {
-    Player player1("game1/player1.txt", "Player1");
-    Player player2("game1/player2.txt", "Player2");
+    Player player1("game2/player1.txt", "Player1");
+    Player player2("game2/player2.txt", "Player2");
 
     player1.rival_player = &player2;
     player2.rival_player = &player1;

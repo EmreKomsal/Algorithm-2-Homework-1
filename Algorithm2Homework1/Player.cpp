@@ -43,25 +43,25 @@ void Player::FindTargetQue() {
     if (target_node->isVisited){
         visitedNodes.push_back(target_node);
     }
-    attack_qeue.pop();
-    if (target_node->up){
-        attack_qeue.push(target_node->up);
+    attack_qeue.pop_front();
+    if (target_node->right && !target_node->right->isVisited){
+        attack_qeue.push_front(target_node->right);
     }
-    if (target_node->left){
-        attack_qeue.push(target_node->left);
+    if (target_node->down && !target_node->down->isVisited){
+        attack_qeue.push_front(target_node->down);
     }
-    if (target_node->down){
-        attack_qeue.push(target_node->right);
+    if (target_node->left && !target_node->left->isVisited){
+        attack_qeue.push_front(target_node->left);
     }
-    if (target_node->right){
-        attack_qeue.push(target_node->right);
+    if (target_node->up && !target_node->up->isVisited){
+        attack_qeue.push_front(target_node->up);
     }
 }
 
 void Player::AttackToRival(){
     if (attack_qeue.size() == 0){
         Node* attacking_node = rival_player->player_board->FindNode(start_x, start_y);
-        attack_qeue.push(attacking_node);
+        attack_qeue.push_front(attacking_node);
     }
     else{
         FindTargetQue();
