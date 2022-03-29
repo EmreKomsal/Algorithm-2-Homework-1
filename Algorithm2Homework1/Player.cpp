@@ -38,7 +38,7 @@ void Player::DeployShips( int x0, int y0, int x1, int y1){
 }
 
 //Uyanınca burayı kurcala
-void Player::FindTargetQue() {
+void Player::FindTargetQue_DFS() {
     Node* target_node = attack_qeue.front();
     if (target_node->isVisited){
         visitedNodes.push_back(target_node);
@@ -58,13 +58,41 @@ void Player::FindTargetQue() {
     }
 }
 
+void Player::FindTargetQue_BFS() {
+    Node* target_node = attack_qeue.front();
+    if (target_node->isVisited){
+        visitedNodes.push_back(target_node);
+    }
+    attack_qeue.pop_front();
+    if (target_node->up && !target_node->up->isVisited){
+        attack_qeue.push_back(target_node->up);
+        number_of_node_kept_in_mem++;
+    }
+    if (target_node->left && !target_node->left->isVisited){
+        attack_qeue.push_back(target_node->left);
+        number_of_node_kept_in_mem++;
+    }
+    if (target_node->down && !target_node->down->isVisited){
+        attack_qeue.push_back(target_node->down);
+        number_of_node_kept_in_mem++;
+    }
+    if (target_node->right && !target_node->right->isVisited){
+        attack_qeue.push_back(target_node->right);
+        number_of_node_kept_in_mem++;
+    }
+}
+
 void Player::AttackToRival(){
     if (attack_qeue.size() == 0){
         Node* attacking_node = rival_player->player_board->FindNode(start_x, start_y);
         attack_qeue.push_front(attacking_node);
+        number_of_node_kept_in_mem++;
     }
-    else{
-        FindTargetQue();
+    else if (search_method == "DFS"){
+        FindTargetQue_DFS();
+    }
+    else if (search_method == "BFS"){
+        FindTargetQue_BFS();
     }
     bool isHit = rival_player->player_board->HitOrMiss(attack_qeue.front());
     if (isHit){

@@ -20,6 +20,8 @@ public:
     int start_x, start_y;
     string search_method;
 
+    int number_of_node_kept_in_mem = 0;
+
     Player* rival_player = nullptr;
     deque<Node*> attack_qeue;
     vector<Node*> visitedNodes;
@@ -29,7 +31,8 @@ public:
 
     void DeployShips(int start_x, int start_y, int end_x, int end_y);
 
-    void FindTargetQue();
+    void FindTargetQue_DFS();
+    void FindTargetQue_BFS();
 
     void AttackToRival();
 };
