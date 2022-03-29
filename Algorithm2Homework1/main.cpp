@@ -12,12 +12,12 @@ using namespace std;
 
 void StatisticWriter(Player* player1, Player* player2, string winner, float running_time);
 
-int main()
+int main(int argc, char** argv)
 {
 
     string winner;
-    Player player1("game1/player1.txt", "Player1");
-    Player player2("game1/player2.txt", "Player2");
+    Player player1(argv[1], "Player1");
+    Player player2(argv[2], "Player2");
 
     player1.rival_player = &player2;
     player2.rival_player = &player1;

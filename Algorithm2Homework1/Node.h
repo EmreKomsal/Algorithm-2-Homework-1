@@ -1,10 +1,10 @@
 //
 // Muhammed Emre Komsal
 //
-#pragma once
 #ifndef NODE_H
 #define NODE_H
 
+using namespace std;
 
 class Node{
 public:
@@ -23,9 +23,6 @@ public:
     Node(int x, int y){
         pos_x = x;
         pos_y = y;
-    }
-
-    void GetHit(){
     }
 };
 

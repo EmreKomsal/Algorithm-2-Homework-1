@@ -1,12 +1,12 @@
 //
 // Created by ekoms on 28.03.2022.
 //
-#pragma once
 #ifndef BOARD_H
 #define BOARD_H
 
 
 #include "Node.h"
+#include <iostream>
 
 using namespace std;
 
